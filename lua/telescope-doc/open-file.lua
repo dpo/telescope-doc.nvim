@@ -69,6 +69,7 @@ M.show = function(tbl)
     initialize_viewers(tbl)
 
     print(filename)
+    vim.api.nvim_notify("Command: " .. tbl.pdf_viewer .. " " .. filename)
     if extension == ".html" or extension == ".htm" then
         -- Check if a html viewer is found
         if tbl.html_viewer == nil then error("No html viewer avariable !") end
