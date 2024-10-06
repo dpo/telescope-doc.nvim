@@ -88,7 +88,7 @@ M.show = function(tbl)
         if tbl.fork_process == false then
             vim.fn.system(tbl.pdf_viewer .. " \"" .. filename .. "\"")
         else
-            vim.fn.system("setsid -f " .. tbl.pdf_viewer .. " \"" .. filename .. "\"")
+            vim.fn.system("/opt/homebrew/opt/util-linux/bin/setsid -f " .. tbl.pdf_viewer .. " \"" .. filename .. "\"")
         end
         return 1
     else
